@@ -24,6 +24,7 @@ import PWhite3 from '../assets1/images/partners/partner-three-white3.png';
 import PWhite4 from '../assets1/images/partners/partner-three-white4.png';
 import PWhite5 from '../assets1/images/partners/partner-three-white5.png';
 import bgDots from '../assets1/images/shapes/solutions-bg-dots.png';
+import '../assets1/css/mobile-logo.css';
 import Preloader from './Preloader';
 // CSS imports
 import '../assets1/css/flaticon.css';
@@ -129,175 +130,157 @@ const LandingPage = () => {
             {/* Header Section */}
             {/* Header Section */}
             {/* Header Section */}
-            <header className="main-header header-three">
-              <div className="header-upper">
-                <div className="container">
-                  <div className="header-inner py-3 px-4" style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    position: 'relative'
-                  }}>
-                    <div className="logo-outer">
-                      <div className="logo">
-                        <a href="/">
-                          <img
-                            src={HRMSLogo}
-                            alt="Logo"
-                            style={{
-                              width: "150px",
-                              height: "auto",
-                              transition: 'transform 0.3s ease'
-                            }}
-                            onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
-                            onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
-                          />
-                        </a>
-                      </div>
-                    </div>
 
-                    {/* Navigation Section */}
-                    <div className="nav-outer clearfix" style={{ color: 'white' }}>
-                      {/* Desktop Menu */}
-                      <nav className="main-menu navbar-expand-lg d-none d-lg-block">
-                        <div className="navbar-collapse">
-                          <ul className="navigation" style={{
-                            display: 'flex',
-                            listStyle: 'none',
-                            margin: '0',
-                            padding: '0'
-                          }}>
-                            <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>Home</a></li>
-                            <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>About</a></li>
-                            <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>Services</a></li>
-                            <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>Contact</a></li>
-                          </ul>
-                        </div>
-                      </nav>
+<header className="main-header header-three">
+  <div className="header-upper">
+    <div className="container">
+      <div className="header-inner py-3 px-4" style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'relative'
+      }}>
+        <div className="logo-outer" style={{marginTop: '30px' , height:'auto'}}>
+          <div className="logo">
+            <a href="/">
+              <img
+                src={HRMSLogo}
+                alt="Logo"
+                style={{
+                  width: "150px",
+                  height: "auto",
+                  transition: 'transform 0.3s ease',
+                  // Responsive styles for mobile
+                  maxWidth: '120px', // Ensure it doesn't get too large on mobile
+                  '@media (max-width: 768px)': {
+                    width: '100px'
+                  }
+                }}
+                // Add CSS class for better mobile control
+                className="responsive-logo"
+                onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+              />
+            </a>
+          </div>
+        </div>
 
-                      {/* Mobile Navigation */}
-                      <div className="d-flex d-lg-none align-items-center">
+        {/* Navigation Section */}
+        <div className="nav-outer clearfix" style={{ 
+          color: 'white',
+          flex: '0 0 auto' // Prevent flex shrinking
+        }}>
+          {/* Desktop Menu */}
+          <nav className="main-menu navbar-expand-lg d-none d-lg-block">
+            <div className="navbar-collapse">
+              <ul className="navigation" style={{
+                display: 'flex',
+                listStyle: 'none',
+                margin: '0',
+                padding: '0'
+              }}>
+                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  padding: '8px 5px',
+                  position: 'relative',
+                  transition: 'all 0.3s ease'
+                }}>Home</a></li>
+                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  padding: '8px 5px',
+                  position: 'relative',
+                  transition: 'all 0.3s ease'
+                }}>About</a></li>
+                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  padding: '8px 5px',
+                  position: 'relative',
+                  transition: 'all 0.3s ease'
+                }}>Services</a></li>
+                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  padding: '8px 5px',
+                  position: 'relative',
+                  transition: 'all 0.3s ease'
+                }}>Contact</a></li>
+              </ul>
+            </div>
+          </nav>
 
-                        <button
-                          type="button"
-                          className="navbar-toggle"
-                          onClick={() => setIsMenuOpen(!isMenuOpen)}
-                          style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            background: 'transparent',
-                            border: 'none',
-                            cursor: 'pointer',
-                            padding: '5px',
-                            width: '40px',
-                            height: '40px'
-                          }}
-                        >
-                          <span style={{
-                            display: 'block',
-                            height: '2px',
-                            width: '24px',
-                            marginBottom: '5px',
-                            backgroundColor: '#ffffff',
-                            transition: 'all 0.3s ease',
-                            transform: isMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'
-                          }}></span>
-                          <span style={{
-                            display: 'block',
-                            height: '2px',
-                            width: '24px',
-                            marginBottom: '5px',
-                            backgroundColor: '#ffffff',
-                            transition: 'all 0.3s ease',
-                            opacity: isMenuOpen ? 0 : 1
-                          }}></span>
-                          <span style={{
-                            display: 'block',
-                            height: '2px',
-                            width: '24px',
-                            backgroundColor: '#ffffff',
-                            transition: 'all 0.3s ease',
-                            transform: isMenuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'
-                          }}></span>
-                        </button>
-                      </div>
-                    </div>
+          {/* Mobile Navigation */}
+          <div className="d-flex d-lg-none align-items-center">
+            <button
+              type="button"
+              className="navbar-toggle"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                background: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '5px',
+                width: '40px',
+                height: '40px'
+              }}
+            >
+              <span style={{
+                display: 'block',
+                height: '2px',
+                width: '24px',
+                marginBottom: '5px',
+                backgroundColor: '#ffffff',
+                transition: 'all 0.3s ease',
+                transform: isMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'
+              }}></span>
+              <span style={{
+                display: 'block',
+                height: '2px',
+                width: '24px',
+                marginBottom: '5px',
+                backgroundColor: '#ffffff',
+                transition: 'all 0.3s ease',
+                opacity: isMenuOpen ? 0 : 1
+              }}></span>
+              <span style={{
+                display: 'block',
+                height: '2px',
+                width: '24px',
+                backgroundColor: '#ffffff',
+                transition: 'all 0.3s ease',
+                transform: isMenuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'
+              }}></span>
+            </button>
+          </div>
+        </div>
 
-                    {/* Desktop Buttons */}
-                    <div className="menu-right d-none d-lg-flex align-items-center">
-                      <button
-                        onClick={() => navigate('/')}
-                        className="theme-btn"
-                        style={{
-                          padding: '10px 20px',
-                          marginRight: '15px',
-                          borderRadius: '6px',
-                          background: 'rgba(78, 97, 255, 0.9)',
-                          color: '#ffffff',
-                          border: 'none',
-                          cursor: 'pointer',
-                          fontWeight: '600',
-                          fontSize: '15px',
-                          transition: 'all 0.3s ease',
-                          display: 'flex',
-                          alignItems: 'center'
-                        }}
-                        onMouseOver={(e) => {
-                          e.target.style.background = 'rgba(78, 97, 255, 1)';
-                          e.target.style.transform = 'translateY(-2px)';
-                          e.target.style.boxShadow = '0 4px 8px rgba(78, 97, 255, 0.3)';
-                        }}
-                        onMouseOut={(e) => {
-                          e.target.style.background = 'rgba(78, 97, 255, 0.9)';
-                          e.target.style.transform = 'translateY(0)';
-                          e.target.style.boxShadow = 'none';
-                        }}
-                      >
-                        Get Started <i className="fas fa-lock ms-1"></i>
-                      </button>
-                      {/* <a href="/signup" 
-            className="theme-btn" 
+        {/* Desktop Buttons */}
+        <div className="menu-right d-none d-lg-flex align-items-center">
+          <button
+            onClick={() => navigate('/')}
+            className="theme-btn"
             style={{
               padding: '10px 20px',
+              marginRight: '15px',
               borderRadius: '6px',
-              background: 'transparent',
+              background: 'rgba(78, 97, 255, 0.9)',
               color: '#ffffff',
-              border: '2px solid rgba(78, 97, 255, 0.9)',
-              textDecoration: 'none',
+              border: 'none',
+              cursor: 'pointer',
               fontWeight: '600',
               fontSize: '15px',
               transition: 'all 0.3s ease',
@@ -305,145 +288,141 @@ const LandingPage = () => {
               alignItems: 'center'
             }}
             onMouseOver={(e) => {
-              e.target.style.background = 'rgba(78, 97, 255, 0.9)';
+              e.target.style.background = 'rgba(78, 97, 255, 1)';
               e.target.style.transform = 'translateY(-2px)';
               e.target.style.boxShadow = '0 4px 8px rgba(78, 97, 255, 0.3)';
             }}
             onMouseOut={(e) => {
-              e.target.style.background = 'transparent';
+              e.target.style.background = 'rgba(78, 97, 255, 0.9)';
               e.target.style.transform = 'translateY(0)';
               e.target.style.boxShadow = 'none';
             }}
           >
-            Sign Up <i className="fas fa-arrow-right ms-1"></i>
-          </a> */}
-                    </div>
-                  </div>
+            Get Started <i className="fas fa-lock ms-1"></i>
+          </button>
+        </div>
+      </div>
 
-                  {/* Mobile Menu */}
-                  <div
-                    className={`mobile-menu ${isMenuOpen ? 'show' : ''}`}
-                    style={{
-                      position: "absolute",
-                      top: "100%",
-                      left: "0",
-                      right: "0",
-
-                      backgroundColor: 'rgb(34, 43, 64)',
-                      padding: isMenuOpen ? "20px" : "0",
-                      maxHeight: isMenuOpen ? "400px" : "0",
-                      overflow: "hidden",
-                      transition: "all 0.3s ease-in-out",
-                      opacity: isMenuOpen ? "1" : "0",
-                      visibility: isMenuOpen ? "visible" : "hidden",
-                      zIndex: "1000",
-                      boxShadow: isMenuOpen ? "0 6px 12px rgba(0, 0, 0, 0.15)" : "none",
-                      borderTop: isMenuOpen ? "1px solid rgba(255, 255, 255, 0.1)" : "none"
-                    }}
-                  >
-                    <ul className="navigation clearfix text-center" style={{
-                      listStyle: 'none',
-                      margin: '0',
-                      padding: '0'
-                    }}>
-                      <li style={{
-                        textAlign: 'center',
-                        padding: '12px 0',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                      }}>
-                        <a href="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>Home</a>
-                      </li>
-                      <li style={{
-                        textAlign: 'center',
-                        padding: '12px 0',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                      }}>
-                        <a href="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>About</a>
-                      </li>
-                      <li style={{
-                        textAlign: 'center',
-                        padding: '12px 0',
-                        borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                      }}>
-                        <a href="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>Services</a>
-                      </li>
-                      <li style={{
-                        textAlign: 'center',
-                        padding: '12px 0'
-                      }}>
-                        <a href="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>Contact</a>
-                      </li>
-                      <li className="mt-3" style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: '10px',
-                        padding: '20px 0 5px'
-                      }}>
-                        <Link to="/" className="theme-btn d-inline-block" style={{
-                          padding: '10px 20px',
-                          borderRadius: '6px',
-                          background: 'rgba(78, 97, 255, 0.9)',
-                          color: '#ffffff',
-                          border: 'none',
-                          textDecoration: 'none',
-                          fontWeight: '600',
-                          fontSize: '14px',
-                          width: '110px',
-                          textAlign: 'center'
-                        }}>
-                          Login
-                        </Link>
-                        <a href="/" className="theme-btn d-inline-block" style={{
-                          padding: '10px 20px',
-                          borderRadius: '6px',
-                          background: 'transparent',
-                          color: '#ffffff',
-                          border: '2px solid rgba(78, 97, 255, 0.9)',
-                          textDecoration: 'none',
-                          fontWeight: '600',
-                          fontSize: '14px',
-                          width: '110px',
-                          textAlign: 'center'
-                        }}>
-                          Sign Up
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Search Overlay */}
-
-                </div>
-              </div>
-            </header>
+      {/* Mobile Menu - Updated positioning */}
+      <div
+        className={`mobile-menu ${isMenuOpen ? 'show' : ''}`}
+        style={{
+          position: "absolute",
+          top: "100%",
+          left: "0",
+          right: "0",
+          backgroundColor: 'rgb(34, 43, 64)',
+          padding: isMenuOpen ? "20px" : "0",
+          maxHeight: isMenuOpen ? "400px" : "0",
+          overflow: "hidden",
+          transition: "all 0.3s ease-in-out",
+          opacity: isMenuOpen ? "1" : "0",
+          visibility: isMenuOpen ? "visible" : "hidden",
+          zIndex: "1000",
+          boxShadow: isMenuOpen ? "0 6px 12px rgba(0, 0, 0, 0.15)" : "none",
+          borderTop: isMenuOpen ? "1px solid rgba(255, 255, 255, 0.1)" : "none"
+        }}
+      >
+        <ul className="navigation clearfix text-center" style={{
+          listStyle: 'none',
+          margin: '0',
+          padding: '0'
+        }}>
+          <li style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+          }}>
+            <a href="/" className="text-white" style={{
+              color: '#ffffff',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              display: 'block',
+              padding: '5px'
+            }}>Home</a>
+          </li>
+          <li style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+          }}>
+            <a href="/" className="text-white" style={{
+              color: '#ffffff',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              display: 'block',
+              padding: '5px'
+            }}>About</a>
+          </li>
+          <li style={{
+            textAlign: 'center',
+            padding: '12px 0',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+          }}>
+            <a href="/" className="text-white" style={{
+              color: '#ffffff',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              display: 'block',
+              padding: '5px'
+            }}>Services</a>
+          </li>
+          <li style={{
+            textAlign: 'center',
+            padding: '12px 0'
+          }}>
+            <a href="/" className="text-white" style={{
+              color: '#ffffff',
+              textDecoration: 'none',
+              fontSize: '16px',
+              fontWeight: '500',
+              display: 'block',
+              padding: '5px'
+            }}>Contact</a>
+          </li>
+          <li className="mt-3" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '10px',
+            padding: '20px 0 5px'
+          }}>
+            <Link to="/" className="theme-btn d-inline-block" style={{
+              padding: '10px 20px',
+              borderRadius: '6px',
+              background: 'rgba(78, 97, 255, 0.9)',
+              color: '#ffffff',
+              border: 'none',
+              textDecoration: 'none',
+              fontWeight: '600',
+              fontSize: '14px',
+              width: '110px',
+              textAlign: 'center'
+            }}>
+              Login
+            </Link>
+            <a href="/" className="theme-btn d-inline-block" style={{
+              padding: '10px 20px',
+              borderRadius: '6px',
+              background: 'transparent',
+              color: '#ffffff',
+              border: '2px solid rgba(78, 97, 255, 0.9)',
+              textDecoration: 'none',
+              fontWeight: '600',
+              fontSize: '14px',
+              width: '110px',
+              textAlign: 'center'
+            }}>
+              Sign Up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
 
             {/* Hero Section */}
             <section className="hero-section-three rel z-2 pt-235 rpt-150 pb-130 rpb-100" style={{

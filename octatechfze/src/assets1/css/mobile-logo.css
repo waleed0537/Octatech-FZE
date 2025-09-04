@@ -1,0 +1,59 @@
+/* Add this CSS to your component or in a separate CSS file */
+
+/* Responsive Logo Styles */
+.responsive-logo {
+  width: 150px !important;
+  height: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Mobile-specific logo adjustments */
+@media (max-width: 768px) {
+  .responsive-logo {
+    width: 100px !important;
+    max-width: 100px !important;
+  }
+  
+  .logo-outer {
+    flex-shrink: 0 !important;
+    min-width: 100px !important;
+  }
+  
+  .logo-outer .logo {
+    display: block !important;
+  }
+  
+  /* Ensure header layout works on mobile */
+  .header-inner {
+    padding: 10px 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-logo {
+    width: 80px !important;
+    max-width: 80px !important;
+  }
+  
+  .logo-outer {
+    min-width: 80px !important;
+  }
+}
+
+/* Fix potential conflicts from imported CSS */
+.main-header .logo img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.main-header .logo-outer {
+  display: block !important;
+}
+
+.main-header .logo {
+  display: block !important;
+}
