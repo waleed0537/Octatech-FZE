@@ -142,7 +142,7 @@ const LandingPage = () => {
       }}>
         <div className="logo-outer" style={{marginTop: '30px' , height:'auto'}}>
           <div className="logo">
-            <a href="/">
+            <Link to="/">
               <img
                 src={HRMSLogo}
                 alt="Logo"
@@ -161,7 +161,7 @@ const LandingPage = () => {
                 onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
                 onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
               />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -179,7 +179,7 @@ const LandingPage = () => {
                 margin: '0',
                 padding: '0'
               }}>
-                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
                   color: '#ffffff',
                   textDecoration: 'none',
                   fontSize: '16px',
@@ -187,8 +187,8 @@ const LandingPage = () => {
                   padding: '8px 5px',
                   position: 'relative',
                   transition: 'all 0.3s ease'
-                }}>Home</a></li>
-                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                }}>Home</Link></li>
+                <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
                   color: '#ffffff',
                   textDecoration: 'none',
                   fontSize: '16px',
@@ -196,8 +196,8 @@ const LandingPage = () => {
                   padding: '8px 5px',
                   position: 'relative',
                   transition: 'all 0.3s ease'
-                }}>About</a></li>
-                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                }}>About</Link></li>
+                <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
                   color: '#ffffff',
                   textDecoration: 'none',
                   fontSize: '16px',
@@ -205,8 +205,8 @@ const LandingPage = () => {
                   padding: '8px 5px',
                   position: 'relative',
                   transition: 'all 0.3s ease'
-                }}>Services</a></li>
-                <li style={{ margin: '0 15px' }}><a href="/" className="text-white1" style={{
+                }}>Services</Link></li>
+                <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
                   color: '#ffffff',
                   textDecoration: 'none',
                   fontSize: '16px',
@@ -214,7 +214,7 @@ const LandingPage = () => {
                   padding: '8px 5px',
                   position: 'relative',
                   transition: 'all 0.3s ease'
-                }}>Contact</a></li>
+                }}>Contact</Link></li>
               </ul>
             </div>
           </nav>
@@ -333,55 +333,55 @@ const LandingPage = () => {
             padding: '12px 0',
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
-            <a href="/" className="text-white" style={{
+            <Link to="/" className="text-white" style={{
               color: '#ffffff',
               textDecoration: 'none',
               fontSize: '16px',
               fontWeight: '500',
               display: 'block',
               padding: '5px'
-            }}>Home</a>
+            }}>Home</Link>
           </li>
           <li style={{
             textAlign: 'center',
             padding: '12px 0',
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
-            <a href="/" className="text-white" style={{
+            <Link to="/" className="text-white" style={{
               color: '#ffffff',
               textDecoration: 'none',
               fontSize: '16px',
               fontWeight: '500',
               display: 'block',
               padding: '5px'
-            }}>About</a>
+            }}>About</Link>
           </li>
           <li style={{
             textAlign: 'center',
             padding: '12px 0',
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
-            <a href="/" className="text-white" style={{
+            <Link to="/" className="text-white" style={{
               color: '#ffffff',
               textDecoration: 'none',
               fontSize: '16px',
               fontWeight: '500',
               display: 'block',
               padding: '5px'
-            }}>Services</a>
+            }}>Services</Link>
           </li>
           <li style={{
             textAlign: 'center',
             padding: '12px 0'
           }}>
-            <a href="/" className="text-white" style={{
+            <Link to="/" className="text-white" style={{
               color: '#ffffff',
               textDecoration: 'none',
               fontSize: '16px',
               fontWeight: '500',
               display: 'block',
               padding: '5px'
-            }}>Contact</a>
+            }}>Contact</Link>
           </li>
           <li className="mt-3" style={{
             display: 'flex',
@@ -403,7 +403,7 @@ const LandingPage = () => {
             }}>
               Login
             </Link>
-            <a href="/" className="theme-btn d-inline-block" style={{
+            <Link to="/" className="theme-btn d-inline-block" style={{
               padding: '10px 20px',
               borderRadius: '6px',
               background: 'transparent',
@@ -416,7 +416,7 @@ const LandingPage = () => {
               textAlign: 'center'
             }}>
               Sign Up
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -506,31 +506,31 @@ const LandingPage = () => {
                   <div className="col-xl-4 col-md-6">
                     <div className="solution-item-three wow fadeInUp delay-0-2s" >
                       <i className="far fa-user" ></i>
-                      <h3><a href="/" >Cybersecurity Solutions</a></h3>
+                      <h3><Link to="/" >Cybersecurity Solutions</Link></h3>
                       <p>Protect your business with advanced security frameworks, risk assessments, and threat prevention strategies tailored to your needs.</p>
-                      <a href="/" className="read-more">
+                      <Link to="/" className="read-more">
                         Learn More <i className="fas fa-arrow-right"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6">
                     <div className="solution-item-three wow fadeInUp delay-0-4s">
                       <i className="fas fa-chart-line"></i>
-                      <h3><a href="/">AI-Powered Automation</a></h3>
+                      <h3><Link to="/">AI-Powered Automation</Link></h3>
                       <p>Streamline repetitive tasks, optimize workflows, and boost productivity with custom AI agents and real-time intelligent insights.</p>
-                      <a href="/" className="read-more">
+                      <Link to="/" className="read-more">
                         Learn More <i className="fas fa-arrow-right"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6">
                     <div className="solution-item-three wow fadeInUp delay-0-6s">
                       <i className="fas fa-user-plus"></i>
-                      <h3><a href="/">Custom Software Development</a></h3>
+                      <h3><Link to="/">Custom Software Development</Link></h3>
                       <p>Build scalable, secure, and tailored applications to meet your unique business needs — from concept to deployment.</p>
-                      <a href="/" className="read-more">
+                      <Link to="/" className="read-more">
                         Learn More <i className="fas fa-arrow-right"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
