@@ -1,14 +1,9 @@
 {
-  "functions": {
-    "app/[[...route]].js": {
-      "runtime": "@vercel/node"
-    }
-  },
+  "framework": "vite",
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
-  
 }
