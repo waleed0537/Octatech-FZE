@@ -1131,11 +1131,11 @@ const LandingPage = () => {
                         <ul className="list-style-three">
                           <li>
                             <i className="fas fa-map-marker-alt"></i>
-                            <span>Pakistan, UAE, USA</span>
+                            <span>UAE, USA</span>
                           </li>
                           <li>
                             <i className="fas fa-envelope"></i>
-                            <a href="support@octatechfze.com">support@octatechfze.com</a>
+                            <a href="support@octatechfze.com">hello@octatechfze.com</a>
                           </li>
                           {/* <li>
                             <i className="fas fa-phone"></i>
