@@ -10,16 +10,17 @@
   opacity: 1 !important;
 }
 
-/* Mobile-specific logo adjustments */
+/* Mobile-specific logo adjustments - MUCH LARGER SIZES */
 @media (max-width: 768px) {
   .responsive-logo {
-    width: 100px !important;
-    max-width: 100px !important;
+    width: 180px !important; /* Significantly increased */
+    max-width: 180px !important;
   }
   
   .logo-outer {
     flex-shrink: 0 !important;
-    min-width: 100px !important;
+    min-width: 180px !important; /* Updated to match logo width */
+    margin-top: 25px !important; /* Adjusted margin */
   }
   
   .logo-outer .logo {
@@ -34,12 +35,26 @@
 
 @media (max-width: 480px) {
   .responsive-logo {
-    width: 80px !important;
-    max-width: 80px !important;
+    width: 160px !important; /* Much larger than before */
+    max-width: 160px !important;
   }
   
   .logo-outer {
-    min-width: 80px !important;
+    min-width: 160px !important; /* Updated to match logo width */
+    margin-top: 20px !important; /* Adjusted for larger logo */
+  }
+}
+
+/* For very small screens (under 360px) */
+@media (max-width: 360px) {
+  .responsive-logo {
+    width: 140px !important; /* Still quite large even on tiny screens */
+    max-width: 140px !important;
+  }
+  
+  .logo-outer {
+    min-width: 140px !important;
+    margin-top: 15px !important;
   }
 }
 
@@ -56,4 +71,19 @@
 
 .main-header .logo {
   display: block !important;
+}
+
+/* Additional mobile header improvements */
+@media (max-width: 768px) {
+  .header-inner {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  /* Ensure the navigation toggle button has proper spacing */
+  .navbar-toggle {
+    margin-left: 10px !important;
+  }
 }

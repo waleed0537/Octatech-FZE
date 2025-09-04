@@ -149,12 +149,7 @@ const LandingPage = () => {
                 style={{
                   width: "150px",
                   height: "auto",
-                  transition: 'transform 0.3s ease',
-                  // Responsive styles for mobile
-                  maxWidth: '120px', // Ensure it doesn't get too large on mobile
-                  '@media (max-width: 768px)': {
-                    width: '100px'
-                  }
+                  transition: 'transform 0.3s ease'
                 }}
                 // Add CSS class for better mobile control
                 className="responsive-logo"
