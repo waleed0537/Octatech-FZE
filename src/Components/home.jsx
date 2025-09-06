@@ -8,7 +8,7 @@ import WOW from 'wow.js';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import HRMSLogo from '../assets1/images/octalogo.png';
+import HRMSLogo from '../assets1/images/octa-tech-logo-new.png';
 import HRMSHeroImage from '../assets1/images/HRMSHeroImage2.png';
 import ShapeDot from '../assets1/images/shapes/dots.png';
 import ShapeTraingle from '../assets1/images/shapes/tringle.png';
@@ -428,10 +428,10 @@ const LandingPage = () => {
                   <div className="col-lg-6 col-md-11">
                     <div className="hero-content-three rpt-15 rmb-75">
                       <h1 className="mb-15 wow fadeInUp delay-0-2s" style={{ marginTop: '100px', fontSize: 'xxx-large', color: 'white', marginBottom: '100px' }}>
-                        Secure, Automate, and Scale with Our SaaS, Cybersecurity, and AI Solutions
+                        Secure, Automate, and Scale with Our SaaS+, Cybersecurity, and AI Solutions
                       </h1>
                       <p className="wow fadeInUp delay-0-4s" style={{ color: 'white' }}>
-                        Empower your business with cutting-edge SaaS, Cybersecurity, Software Development, and Custom AI Agents. Designed for automation, scalability, security, and performance — so you can focus on growth while we handle the tech.
+                        Empower your business with cutting-edge SaaS+, Cybersecurity, Software Development, and Custom AI Agents. Designed for automation, scalability, security, and performance — so you can focus on growth while we handle the tech.
                       </p>
                       <form className="newsletter-form mt-40" onSubmit={handleNewsletterSubmit}>
                         <div className="newsletter-email wow fadeInUp delay-0-6s">
@@ -493,7 +493,7 @@ const LandingPage = () => {
                 <div className="row justify-content-center">
                   <div className="col-xl-7 col-lg-8 col-md-10">
                     <div className="section-title mb-75">
-                      <h2 style={{ marginBottom: '120px', fontSize: '40px' }}>Empowering Businesses with Secure and Smart Tech Solutions</h2>
+                      <h2 style={{ marginBottom: '120px', fontSize: '40px' }}>Making life simple for our community</h2>
                     </div>
                   </div>
                 </div>
@@ -565,13 +565,13 @@ const LandingPage = () => {
                         fontSize: '16px',
                         lineHeight: '1.6',
                         marginBottom: '25px'
-                      }}>We deliver SaaS platforms, advanced Cybersecurity, custom-built Software, and AI Agents that automate tasks. Designed for scalability, security, and efficiency, our solutions empower businesses to innovate, optimize, and grow.</p>
+                      }}>We deliver SaaS+ platforms, advanced Cybersecurity, custom-built Software, and AI Agents that automate tasks. Designed for scalability, security, and efficiency, our solutions empower businesses to innovate, optimize, and grow.</p>
                       <ul className="list-style-one mt-25 mb-35" style={{
                         listStyle: 'none',
                         padding: '0',
                         margin: '25px 0 35px'
                       }}>
-                        {['Comprehensive SaaS Solutions', 'Advanced Cybersecurity Services', 'Tailored Software Development', 'AI Agents & Automation'].map((item, index) => (
+                        {['Comprehensive SaaS+ Solutions', 'Advanced Cybersecurity Services', 'Tailored Software Development', 'AI Agents & Automation'].map((item, index) => (
                           <li key={index} style={{
                             color: 'white',
                             position: 'relative',
@@ -631,7 +631,7 @@ const LandingPage = () => {
                           {
                             icon: 'fas fa-check',
                             title: 'Cross-Platform Compatibility',
-                            desc: 'Leverage our SaaS platforms and custom software across desktop, tablet, or mobile—ensuring seamless business operations wherever you are.'
+                            desc: 'Leverage our SaaS+ platforms and custom software across desktop, tablet, or mobile—ensuring seamless business operations wherever you are.'
                           },
                           {
                             icon: 'fas fa-check',
@@ -750,8 +750,8 @@ const LandingPage = () => {
                     <div className="service-item wow fadeInUp delay-0-2s" style={{ backgroundColor: '#222b40' }}>
                       <i className="flaticon-file"></i>
                       <div className="content">
-                        <h3><a href="single-service.html" style={{ color: 'white' }}>Comprehensive SaaS Platforms</a></h3>
-                        <p>Streamline and scale your operations with cloud-based platforms built for flexibility, reliability, and growth.</p>
+                        <h3><a href="single-service.html" style={{ color: 'white' }}>Comprehensive SaaS+ Platforms</a></h3>
+                        <p>Streamline and scale your operations with a fully managed cloud platform engineered for enterprise-grade performance, security, and growth.</p>
                       </div>
                     </div>
                   </div>
@@ -1089,7 +1089,7 @@ const LandingPage = () => {
                     <div className="col-lg-3 col-md-6">
                       <div className="footer-widget">
                         <h4 className="footer-title">OctaTech FZE</h4>
-                        <p>Our advanced solutions simplify business operations by combining SaaS, Cybersecurity, Software Development, and AI Automation — delivering scalability, security, and performance</p>
+                        <p>Our advanced solutions simplify business operations by combining SaaS+, Cybersecurity, Software Development, and AI Automation — delivering scalability, security, and performance</p>
                         <div className="social-style-one mt-20">
                           <a href="#"><i className="fab fa-facebook-f"></i></a>
                           <a href="#"><i className="fab fa-twitter"></i></a>
