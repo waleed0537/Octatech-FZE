@@ -118,258 +118,7 @@ const FAQPage = () => {
                                             </div>
                                         </div>
 
-                                        {/* Navigation Section */}
-                                        <div className="nav-outer clearfix" style={{
-                                            color: 'white',
-                                            flex: '0 0 auto'
-                                        }}>
-                                            {/* Desktop Menu */}
-                                            <nav className="main-menu navbar-expand-lg d-none d-lg-block">
-                                                <div className="navbar-collapse">
-                                                    <ul className="navigation" style={{
-                                                        display: 'flex',
-                                                        listStyle: 'none',
-                                                        margin: '0',
-                                                        padding: '0'
-                                                    }}>
-                                                        <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                                                            color: '#ffffff',
-                                                            textDecoration: 'none',
-                                                            fontSize: '16px',
-                                                            fontWeight: '500',
-                                                            padding: '8px 5px',
-                                                            position: 'relative',
-                                                            transition: 'all 0.3s ease'
-                                                        }}>Home</Link></li>
-                                                        <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                                                            color: '#ffffff',
-                                                            textDecoration: 'none',
-                                                            fontSize: '16px',
-                                                            fontWeight: '500',
-                                                            padding: '8px 5px',
-                                                            position: 'relative',
-                                                            transition: 'all 0.3s ease'
-                                                        }}>About</Link></li>
-                                                        <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                                                            color: '#ffffff',
-                                                            textDecoration: 'none',
-                                                            fontSize: '16px',
-                                                            fontWeight: '500',
-                                                            padding: '8px 5px',
-                                                            position: 'relative',
-                                                            transition: 'all 0.3s ease'
-                                                        }}>Services</Link></li>
-                                                        <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                                                            color: '#ffffff',
-                                                            textDecoration: 'none',
-                                                            fontSize: '16px',
-                                                            fontWeight: '500',
-                                                            padding: '8px 5px',
-                                                            position: 'relative',
-                                                            transition: 'all 0.3s ease'
-                                                        }}>Contact</Link></li>
-                                                        <li style={{ margin: '0 15px' }}>
-                                                            <Link
-                                                                to="/faq"
-                                                                className="text-white1"
-                                                                style={{
-                                                                    color: '#ffffff',
-                                                                    textDecoration: 'none',
-                                                                    fontSize: '16px',
-                                                                    fontWeight: '500',
-                                                                    padding: '8px 5px',
-                                                                    position: 'relative',
-                                                                    transition: 'all 0.3s ease'
-                                                                }}
-                                                            >
-                                                                FAQ
-                                                            </Link>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </nav>
-
-                                            {/* Mobile Navigation */}
-                                            <div className="d-flex d-lg-none align-items-center">
-                                                <button
-                                                    type="button"
-                                                    className="navbar-toggle"
-                                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                                    style={{
-                                                        display: 'flex',
-                                                        flexDirection: 'column',
-                                                        justifyContent: 'center',
-                                                        alignItems: 'center',
-                                                        background: 'transparent',
-                                                        border: 'none',
-                                                        cursor: 'pointer',
-                                                        padding: '5px',
-                                                        width: '40px',
-                                                        height: '40px'
-                                                    }}
-                                                >
-                                                    <span style={{
-                                                        display: 'block',
-                                                        height: '2px',
-                                                        width: '24px',
-                                                        marginBottom: '5px',
-                                                        backgroundColor: '#ffffff',
-                                                        transition: 'all 0.3s ease',
-                                                        transform: isMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'
-                                                    }}></span>
-                                                    <span style={{
-                                                        display: 'block',
-                                                        height: '2px',
-                                                        width: '24px',
-                                                        marginBottom: '5px',
-                                                        backgroundColor: '#ffffff',
-                                                        transition: 'all 0.3s ease',
-                                                        opacity: isMenuOpen ? 0 : 1
-                                                    }}></span>
-                                                    <span style={{
-                                                        display: 'block',
-                                                        height: '2px',
-                                                        width: '24px',
-                                                        backgroundColor: '#ffffff',
-                                                        transition: 'all 0.3s ease',
-                                                        transform: isMenuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'
-                                                    }}></span>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        {/* Desktop Buttons */}
-                                        <div className="menu-right d-none d-lg-flex align-items-center">
-                                            <button
-                                                onClick={() => navigate('/')}
-                                                className="theme-btn"
-                                                style={{
-                                                    padding: '10px 20px',
-                                                    marginRight: '15px',
-                                                    borderRadius: '6px',
-                                                    background: 'rgba(78, 97, 255, 0.9)',
-                                                    color: '#ffffff',
-                                                    border: 'none',
-                                                    cursor: 'pointer',
-                                                    fontWeight: '600',
-                                                    fontSize: '15px',
-                                                    transition: 'all 0.3s ease',
-                                                    display: 'flex',
-                                                    alignItems: 'center'
-                                                }}
-                                                onMouseOver={(e) => {
-                                                    e.target.style.background = 'rgba(78, 97, 255, 1)';
-                                                    e.target.style.transform = 'translateY(-2px)';
-                                                    e.target.style.boxShadow = '0 4px 8px rgba(78, 97, 255, 0.3)';
-                                                }}
-                                                onMouseOut={(e) => {
-                                                    e.target.style.background = 'rgba(78, 97, 255, 0.9)';
-                                                    e.target.style.transform = 'translateY(0)';
-                                                    e.target.style.boxShadow = 'none';
-                                                }}
-                                            >
-                                                Get Started <i className="fas fa-lock ms-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    {/* Mobile Menu */}
-                                    <div
-                                        className={`mobile-menu ${isMenuOpen ? 'show' : ''}`}
-                                        style={{
-                                            position: "absolute",
-                                            top: "100%",
-                                            left: "0",
-                                            right: "0",
-                                            backgroundColor: 'rgb(34, 43, 64)',
-                                            padding: isMenuOpen ? "20px" : "0",
-                                            maxHeight: isMenuOpen ? "400px" : "0",
-                                            overflow: "hidden",
-                                            transition: "all 0.3s ease-in-out",
-                                            opacity: isMenuOpen ? "1" : "0",
-                                            visibility: isMenuOpen ? "visible" : "hidden",
-                                            zIndex: "1000",
-                                            boxShadow: isMenuOpen ? "0 6px 12px rgba(0, 0, 0, 0.15)" : "none",
-                                            borderTop: isMenuOpen ? "1px solid rgba(255, 255, 255, 0.1)" : "none"
-                                        }}
-                                    >
-                                        <ul className="navigation clearfix text-center" style={{
-                                            listStyle: 'none',
-                                            margin: '0',
-                                            padding: '0'
-                                        }}>
-                                            <li style={{
-                                                textAlign: 'center',
-                                                padding: '12px 0',
-                                                borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                                            }}>
-                                                <Link to="/" className="text-white" style={{
-                                                    color: '#ffffff',
-                                                    textDecoration: 'none',
-                                                    fontSize: '16px',
-                                                    fontWeight: '500',
-                                                    display: 'block',
-                                                    padding: '5px'
-                                                }}>Home</Link>
-                                            </li>
-                                            <li style={{
-                                                textAlign: 'center',
-                                                padding: '12px 0',
-                                                borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                                            }}>
-                                                <Link to="/" className="text-white" style={{
-                                                    color: '#ffffff',
-                                                    textDecoration: 'none',
-                                                    fontSize: '16px',
-                                                    fontWeight: '500',
-                                                    display: 'block',
-                                                    padding: '5px'
-                                                }}>About</Link>
-                                            </li>
-                                            <li style={{
-                                                textAlign: 'center',
-                                                padding: '12px 0',
-                                                borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                                            }}>
-                                                <Link to="/" className="text-white" style={{
-                                                    color: '#ffffff',
-                                                    textDecoration: 'none',
-                                                    fontSize: '16px',
-                                                    fontWeight: '500',
-                                                    display: 'block',
-                                                    padding: '5px'
-                                                }}>Services</Link>
-                                            </li>
-                                            <li style={{
-                                                textAlign: 'center',
-                                                padding: '12px 0'
-                                            }}>
-                                                <Link to="/" className="text-white" style={{
-                                                    color: '#ffffff',
-                                                    textDecoration: 'none',
-                                                    fontSize: '16px',
-                                                    fontWeight: '500',
-                                                    display: 'block',
-                                                    padding: '5px',
-                                                    borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-                                                }}>Contact</Link>
-                                            </li>
-                                            <li style={{
-                                                textAlign: 'center',
-                                                padding: '12px 0'
-                                            }}>
-                                                <Link to="/faq" className="text-white" style={{
-                                                    color: '#ffffff',
-                                                    textDecoration: 'none',
-                                                    fontSize: '16px',
-                                                    fontWeight: '500',
-                                                    display: 'block',
-                                                    padding: '5px',
-                                                    
-                                                }}>FAQ</Link>
-                                            </li>
-                                        </ul>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -409,13 +158,7 @@ const FAQPage = () => {
                             <img className="dots-shape" src={ShapeDot} alt="Shape" />
                             <img className="tringle-shape" src={ShapeTraingle} alt="Shape" />
                             <img className="close-shape" src={ShapeClose} alt="Shape" />
-                        </section>
 
-                        {/* FAQ Content Section */}
-                        <section className="faq-section rel z-1 pt-100 pb-130" style={{
-                            backgroundColor: '#131b2c',
-                            color: 'white'
-                        }}>
                             <div className="container">
                                 <div className="row justify-content-center">
                                     <div className="col-lg-10">
@@ -425,7 +168,7 @@ const FAQPage = () => {
                                                     key={index}
                                                     className="faq-item"
                                                     style={{
-                                                        backgroundColor: 'rgb(34, 43, 64)',
+                                                        backgroundColor: 'rgba(21, 32, 59, 1)',
                                                         marginBottom: '20px',
                                                         borderRadius: '12px',
                                                         overflow: 'hidden',
@@ -507,7 +250,7 @@ const FAQPage = () => {
                                 </div>
 
                                 {/* Still have questions section */}
-                                <div className="row justify-content-center mt-80">
+                                {/* <div className="row justify-content-center mt-80">
                                     <div className="col-lg-8 text-center">
                                         <div className="still-questions wow fadeInUp delay-0-4s" style={{
                                             backgroundColor: '#222b40',
@@ -602,74 +345,61 @@ const FAQPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </section>
 
                         {/* Footer - Exact copy from home.jsx */}
                         <footer className="footer-section footer-two bg-gray text-white rel z-1">
-                            <div className="container">
-                                <div className="footer-top py-50">
-                                    <div className="row">
-                                        <div className="col-lg-3 col-md-6">
-                                            <div className="footer-widget">
+                                      <div className="container">
+                                        <div className="footer-top py-50">
+                                          <div className="row">
+                                            <div className="col-lg-3 col-md-6">
+                                              <div className="footer-widget">
                                                 <h4 className="footer-title">OctaTech FZE</h4>
-                                                <p>Our advanced solutions simplify business operations by combining SaaS+, Cybersecurity, Software Development, and AI Automation – delivering scalability, security, and performance</p>
-                                                <div className="social-style-one mt-20">
-                                                    <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                    <a href="#"><i className="fab fa-twitter"></i></a>
-                                                    <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                                                    <a href="#"><i className="fab fa-instagram"></i></a>
-                                                </div>
+                                                <p>Our advanced solutions simplify business operations by combining SaaS+, Cybersecurity, Software Development, and AI Automation — delivering scalability, security, and performance</p>
+                        
+                                              </div>
                                             </div>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6">
-                                            <div className="footer-widget">
-                                                <h4 className="footer-title">Quick Links</h4>
-                                                <ul className="list-style-two">
-                                                    <li><a href="/about">About Us</a></li>
-                                                    <li><a href="/services">Our Services</a></li>
-                                                    <li><a href="/products">Products</a></li>
-                                                    <li><a href="/contact">Contact Us</a></li>
-                                                </ul>
+                                            <div className="col-lg-3 col-md-6">
+                                              <div className="footer-widget">
+                        
+                                              </div>
                                             </div>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6">
-                                            <div className="footer-widget">
-                                                <h4 className="footer-title">Support</h4>
-                                                <ul className="list-style-two">
-                                                    <li><a href="/help">Help Center</a></li>
-                                                    <li><a href="/faq">FAQ</a></li>
-                                                    <li><a href="/privacy">Privacy Policy</a></li>
-                                                    <li><a href="/terms">Terms of Service</a></li>
-                                                </ul>
+                                            <div className="col-lg-3 col-md-6">
+                                              <div className="footer-widget">
+                        
+                                              </div>
                                             </div>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6">
-                                            <div className="footer-widget">
+                                            <div className="col-lg-3 col-md-6">
+                                              <div className="footer-widget">
                                                 <h4 className="footer-title">Contact Info</h4>
                                                 <ul className="list-style-three">
-                                                    <li>
-                                                        <i className="fas fa-map-marker-alt"></i>
-                                                        <span>UAE, USA</span>
-                                                    </li>
-                                                    <li>
-                                                        <i className="fas fa-envelope"></i>
-                                                        <a href="support@octatechfze.com">hello@octatechfze.com</a>
-                                                    </li>
+                                                  <li>
+                                                    <i className="fas fa-map-marker-alt"></i>
+                                                    <span>UAE, USA</span>
+                                                  </li>
+                                                  <li>
+                                                    <i className="fas fa-envelope"></i>
+                                                    <a href="support@octatechfze.com">hello@octatechfze.com</a>
+                                                  </li>
+                                                  {/* <li>
+                                                    <i className="fas fa-phone"></i>
+                                                    <a href="tel:+1234567890">+123 456 7890</a>
+                                                  </li> */}
                                                 </ul>
+                                              </div>
                                             </div>
+                                          </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="copyright-area text-center py-20">
-                                    <p>© 2025 octatechfze. All Rights Reserved</p>
-                                </div>
-                            </div>
-                            <img className="dots-shape" src={ShapeDot} alt="Shape" />
-                            <img className="tringle-shape" src={ShapeTraingle} alt="Shape" />
-                            <img className="close-shape" src={ShapeClose} alt="Shape" />
-                        </footer>
+                                        <div className="copyright-area text-center py-20">
+                                          <p>© 2025 octatechfze. All Rights Reserved</p>
+                                        </div>
+                                      </div>
+                                      <img className="dots-shape" src={ShapeDot} alt="Shape" />
+                                      <img className="tringle-shape" src={ShapeTraingle} alt="Shape" />
+                                      <img className="close-shape" src={ShapeClose} alt="Shape" />
+                                    </footer>
 
                         {/* Scroll Top Button */}
                         <button

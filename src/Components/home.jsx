@@ -183,33 +183,84 @@ const LandingPage = () => {
                               position: 'relative',
                               transition: 'all 0.3s ease'
                             }}>Home</Link></li>
-                            <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>About</Link></li>
-                            <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>Services</Link></li>
-                            <li style={{ margin: '0 15px' }}><Link to="/" className="text-white1" style={{
-                              color: '#ffffff',
-                              textDecoration: 'none',
-                              fontSize: '16px',
-                              fontWeight: '500',
-                              padding: '8px 5px',
-                              position: 'relative',
-                              transition: 'all 0.3s ease'
-                            }}>Contact</Link></li>
+                            <li style={{ margin: '0 15px' }}><Link
+                              to="/#about-section-id"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                const element = document.getElementById('about-section-id');
+                                if (element) {
+                                  element.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                  });
+                                }
+                              }}
+                              className="text-white1"
+                              style={{
+                                color: '#ffffff',
+                                textDecoration: 'none',
+                                fontSize: '16px',
+                                fontWeight: '500',
+                                padding: '8px 5px',
+                                position: 'relative',
+                                transition: 'all 0.3s ease'
+                              }}
+                            >
+                              About
+                            </Link></li>
+                            <li style={{ margin: '0 15px' }}><Link
+                              to="/#services-section-id"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                const element = document.getElementById('services-section-id');
+                                if (element) {
+                                  element.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                  });
+                                }
+                              }}
+                              className="text-white1"
+                              style={{
+                                color: '#ffffff',
+                                textDecoration: 'none',
+                                fontSize: '16px',
+                                fontWeight: '500',
+                                padding: '8px 5px',
+                                position: 'relative',
+                                transition: 'all 0.3s ease'
+                              }}
+                            >
+                              Services
+                            </Link>
+                            </li>
+                            <li style={{ margin: '0 15px' }}>
+                            <Link
+                              to="/#contact-section-id"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                const element = document.getElementById('contact-section-id');
+                                if (element) {
+                                  element.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                  });
+                                }
+                              }}
+                              className="text-white1"
+                              style={{
+                                color: '#ffffff',
+                                textDecoration: 'none',
+                                fontSize: '16px',
+                                fontWeight: '500',
+                                padding: '8px 5px',
+                                position: 'relative',
+                                transition: 'all 0.3s ease'
+                              }}
+                            >
+                              Contact
+                            </Link>
+                            </li>
                             <li style={{ margin: '0 15px' }}>
                               <Link
                                 to="/faq"
@@ -310,7 +361,7 @@ const LandingPage = () => {
                           e.target.style.boxShadow = 'none';
                         }}
                       >
-                        Get Started <i className="fas fa-lock ms-1"></i>
+                        Get Started
                       </button>
                     </div>
                   </div>
@@ -359,42 +410,93 @@ const LandingPage = () => {
                         padding: '12px 0',
                         borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
                       }}>
-                        <Link to="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>About</Link>
+                        <Link
+                          to="/#about-section-id"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.getElementById('about-section-id');
+                            if (element) {
+                              element.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                              });
+                            }
+                          }}
+                          className="text-white1"
+                          style={{
+                            color: '#ffffff',
+                            textDecoration: 'none',
+                            fontSize: '16px',
+                            fontWeight: '500',
+                            padding: '8px 5px',
+                            position: 'relative',
+                            transition: 'all 0.3s ease'
+                          }}
+                        >
+                          About
+                        </Link>
                       </li>
                       <li style={{
                         textAlign: 'center',
                         padding: '12px 0',
                         borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
                       }}>
-                        <Link to="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>Services</Link>
+                        <Link
+                          to="/#services-section-id"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.getElementById('services-section-id');
+                            if (element) {
+                              element.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                              });
+                            }
+                          }}
+                          className="text-white1"
+                          style={{
+                            color: '#ffffff',
+                            textDecoration: 'none',
+                            fontSize: '16px',
+                            fontWeight: '500',
+                            padding: '8px 5px',
+                            position: 'relative',
+                            transition: 'all 0.3s ease'
+                          }}
+                        >
+                          Services
+                        </Link>
                       </li>
                       <li style={{
                         textAlign: 'center',
                         padding: '12px 0',
                         borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
                       }}>
-                        <Link to="/" className="text-white" style={{
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '16px',
-                          fontWeight: '500',
-                          display: 'block',
-                          padding: '5px'
-                        }}>Contact</Link>
+                        <Link
+                          to="/#contact-section-id"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.getElementById('contact-section-id');
+                            if (element) {
+                              element.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                              });
+                            }
+                          }}
+                          className="text-white1"
+                          style={{
+                            color: '#ffffff',
+                            textDecoration: 'none',
+                            fontSize: '16px',
+                            fontWeight: '500',
+                            padding: '8px 5px',
+                            position: 'relative',
+                            transition: 'all 0.3s ease'
+                          }}
+                        >
+                          Contact
+                        </Link>
                       </li>
                       <li style={{
                         textAlign: 'center',
@@ -481,7 +583,7 @@ const LandingPage = () => {
 
 
             {/* Solutions Section */}
-            <section
+            <section id='about-section-id'
               className="solutions-section-three text-white text-center rel bg-blue pt-130 rpt-100 z-1 pb-75 rpb-45"
               style={{ backgroundImage: `url(${bgDots})`, backgroundColor: ' #141B2D' }}
 
@@ -500,9 +602,7 @@ const LandingPage = () => {
                       <i className="far fa-user" ></i>
                       <h3><Link to="/" >Cybersecurity Solutions</Link></h3>
                       <p>Protect your business with advanced security frameworks, risk assessments, and threat prevention strategies tailored to your needs.</p>
-                      <Link to="/" className="read-more">
-                        Learn More <i className="fas fa-arrow-right"></i>
-                      </Link>
+
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6">
@@ -510,9 +610,7 @@ const LandingPage = () => {
                       <i className="fas fa-chart-line"></i>
                       <h3><Link to="/">AI-Powered Automation</Link></h3>
                       <p>Streamline repetitive tasks, optimize workflows, and boost productivity with custom AI agents and real-time intelligent insights.</p>
-                      <Link to="/" className="read-more">
-                        Learn More <i className="fas fa-arrow-right"></i>
-                      </Link>
+
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6">
@@ -520,9 +618,7 @@ const LandingPage = () => {
                       <i className="fas fa-user-plus"></i>
                       <h3><Link to="/">Custom Software Development</Link></h3>
                       <p>Build scalable, secure, and tailored applications to meet your unique business needs — from concept to deployment.</p>
-                      <Link to="/" className="read-more">
-                        Learn More <i className="fas fa-arrow-right"></i>
-                      </Link>
+
                     </div>
                   </div>
                 </div>
@@ -732,7 +828,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </section>
-            <section className="services-section-three bg-lighter rel z-1 pt-250 pb-100 rpb-70" style={{ backgroundColor: ' #131b2c' }}>
+            <section id='services-section-id' className="services-section-three bg-lighter rel z-1 pt-250 pb-100 rpb-70" style={{ backgroundColor: ' #131b2c' }}>
               <div className="container">
                 <div className="row justify-content-center text-center">
                   <div className="col-xl-7 col-lg-8 col-md-10">
@@ -839,7 +935,7 @@ const LandingPage = () => {
               </div>
             </div> */}
             {/* Contact Section */}
-            <section style={{
+            <section id='contact-section-id' style={{
               padding: '115px 0 130px',
               position: 'relative',
               zIndex: 1,
@@ -1087,34 +1183,17 @@ const LandingPage = () => {
                       <div className="footer-widget">
                         <h4 className="footer-title">OctaTech FZE</h4>
                         <p>Our advanced solutions simplify business operations by combining SaaS+, Cybersecurity, Software Development, and AI Automation — delivering scalability, security, and performance</p>
-                        <div className="social-style-one mt-20">
-                          <a href="#"><i className="fab fa-facebook-f"></i></a>
-                          <a href="#"><i className="fab fa-twitter"></i></a>
-                          <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                          <a href="#"><i className="fab fa-instagram"></i></a>
-                        </div>
+
                       </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                       <div className="footer-widget">
-                        <h4 className="footer-title">Quick Links</h4>
-                        <ul className="list-style-two">
-                          <li><a href="/about">About Us</a></li>
-                          <li><a href="/services">Our Services</a></li>
-                          <li><a href="/products">Products</a></li>
-                          <li><a href="/contact">Contact Us</a></li>
-                        </ul>
+
                       </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                       <div className="footer-widget">
-                        <h4 className="footer-title">Support</h4>
-                        <ul className="list-style-two">
-                          <li><a href="/help">Help Center</a></li>
-                          <li><a href="/faq">FAQ</a></li>
-                          <li><a href="/privacy">Privacy Policy</a></li>
-                          <li><a href="/terms">Terms of Service</a></li>
-                        </ul>
+
                       </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
