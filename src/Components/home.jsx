@@ -147,7 +147,7 @@ const LandingPage = () => {
                             src={HRMSLogo}
                             alt="Logo"
                             style={{
-                              width: "150px",
+                              width: "200px",
                               height: "auto",
                               transition: 'transform 0.3s ease'
                             }}
