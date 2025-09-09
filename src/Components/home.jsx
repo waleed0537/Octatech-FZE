@@ -535,7 +535,7 @@ const LandingPage = () => {
                   <div className="col-lg-6 col-md-11">
                     <div className="hero-content-three rpt-15 rmb-75">
                       <h1 className="mb-15 wow fadeInUp delay-0-2s" style={{ marginTop: '100px', fontSize: 'xxx-large', color: 'white', marginBottom: '100px' }}>
-                        Secure, Automate, and Scale with Our SaaS+, Cybersecurity, and AI Solutions
+                        Unlock Growth with Secure SaaS+, Intelligent AI, and Advanced Protection
                       </h1>
                       <p className="wow fadeInUp delay-0-4s" style={{ color: 'white' }}>
                         Empower your business with cutting-edge SaaS+, Cybersecurity, Software Development, and Custom AI Agents. Designed for automation, scalability, security, and performance — so you can focus on growth while we handle the tech.
