@@ -60,25 +60,20 @@ const Preloader = ({ images, children }) => {
       <div className="preloader-wrapper">
         <div className="loader-container">
           <div className="animation-preloader">
-            <div className="spinner"></div>
-            <div className="txt-loading">
-              <span data-text-preloader="O" className="letters-loading">O</span>
-              <span data-text-preloader="C" className="letters-loading">C</span>
-              <span data-text-preloader="T" className="letters-loading">T</span>
-              <span data-text-preloader="A" className="letters-loading">A</span>
-              <span data-text-preloader="T" className="letters-loading">T</span>
-              <span data-text-preloader="E" className="letters-loading">E</span>
-<span data-text-preloader="C" className="letters-loading">C</span>
-<span data-text-preloader="H" className="letters-loading">H</span>
-<span data-text-preloader=" " className="letters-loading">&nbsp;</span>
-<span data-text-preloader="F" className="letters-loading">F</span>
-<span data-text-preloader="Z" className="letters-loading">Z</span>
-<span data-text-preloader="E" className="letters-loading">E</span>
-
+            <div className="logo-container">
+              <div className="logo-ring">
+                <div className="logo-inner">
+                  <span className="logo-text">OCTA TECH</span>
+                </div>
+              </div>
             </div>
-            <div className="loading-progress">
-              {progress}%
+            <div className="progress-container">
+              <div className="progress-bar">
+                <div className="progress-fill" style={{width: `${progress}%`}}></div>
+              </div>
+              <div className="progress-text">{progress}%</div>
             </div>
+            <div className="loading-status">Loading assets...</div>
           </div>
         </div>
         <style jsx>{`
@@ -89,108 +84,175 @@ const Preloader = ({ images, children }) => {
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: #1e2547; /* Dark blue background to match the theme */
+            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #1e2547 100%);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
           }
           
           .loader-container {
-          color:white;
             text-align: center;
+            position: relative;
           }
 
-          .spinner {
-          color:white;
-            animation: spinner 1.5s infinite ease;
+          .logo-container {
+            margin-bottom: 40px;
+          }
+
+          .logo-ring {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            border: 3px solid rgba(78, 97, 255, 0.2);
             border-radius: 50%;
-            border: 4px solid rgba(78, 97, 255, 0.3); /* Lighter blue border */
-            border-top-color: #4e61ff; /* Bright blue color from the UI */
-            height: 120px;
-            margin: 0 auto 45px auto;
-            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate 3s linear infinite;
           }
 
-          .txt-loading {
-          color:white;
-            text-align: center;
-            user-select: none;
-            margin-bottom: 20px;
-          }
-
-          .letters-loading {
-          color:white;
-            
-            font-size: 60px;
-            font-weight: 600;
-            line-height: 70px;
-            letter-spacing: 12px;
-            display: inline-block;
-            position: relative;
-            -webkit-text-stroke-width: 0.3px;
-            -webkit-text-stroke-color: rgba(78, 97, 255, 0.4);
-            animation: wave-text 2s ease-in-out infinite;
-          }
-
-          .letters-loading:nth-child(1) { animation-delay: 0.0s; }
-          .letters-loading:nth-child(2) { animation-delay: 0.1s; }
-          .letters-loading:nth-child(3) { animation-delay: 0.2s; }
-          .letters-loading:nth-child(4) { animation-delay: 0.3s; }
-          .letters-loading:nth-child(5) { animation-delay: 0.4s; }
-          .letters-loading:nth-child(6) { animation-delay: 0.5s; }
-
-          .loading-progress {
-            color: #ffffff; /* White text for better contrast on dark background */
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 20px;
-            position: relative;
-          }
-
-          .loading-progress:after {
+          .logo-ring::before {
             content: '';
-            display: block;
-            width: ${progress}%;
-            height: 4px;
-            background: #4e61ff; /* Bright blue color to match buttons */
-            border-radius: 4px;
-            margin: 10px auto 0;
-            transition: width 0.3s ease;
-            max-width: 200px;
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: 3px solid transparent;
+            border-top: 3px solid #4e61ff;
+            border-right: 3px solid #4e61ff;
+            border-radius: 50%;
+            animation: rotate 2s linear infinite reverse;
           }
 
-          @keyframes spinner {
+          .logo-inner {
+            width: 110px;
+            height: 110px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(78, 97, 255, 0.05);
+            backdrop-filter: blur(10px);
+          }
+
+          .logo-text {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            line-height: 1.2;
+            text-shadow: 0 0 10px rgba(78, 97, 255, 0.5);
+          }
+
+          .progress-container {
+            margin-bottom: 30px;
+          }
+
+          .progress-bar {
+            width: 280px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+          }
+
+          .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4e61ff 0%, #7c3aed 50%, #4e61ff 100%);
+            border-radius: 10px;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: 0 0 20px rgba(78, 97, 255, 0.4);
+          }
+
+          .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+            animation: shimmer 2s infinite;
+          }
+
+          .progress-text {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          }
+
+          .loading-status {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            animation: pulse 2s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
             0% {
-              transform: rotateZ(0deg);
+              transform: rotate(0deg);
             }
             100% {
-              transform: rotateZ(360deg);
+              transform: rotate(360deg);
             }
           }
 
-          @keyframes wave-text {
+          @keyframes shimmer {
             0% {
-              transform: translateY(0);
-            }
-            20% {
-              transform: translateY(-10px);
-            }
-            40% {
-              transform: translateY(0);
+              transform: translateX(-100%);
             }
             100% {
-              transform: translateY(0);
+              transform: translateX(100%);
+            }
+          }
+
+          @keyframes pulse {
+            0%, 100% {
+              opacity: 0.7;
+            }
+            50% {
+              opacity: 1;
             }
           }
 
           @media screen and (max-width: 767px) {
-            .spinner {
-              height: 80px;
-              width: 80px;
+            .logo-ring {
+              width: 100px;
+              height: 100px;
             }
-            .letters-loading {
-              font-size: 40px;
-              letter-spacing: 8px;
+            
+            .logo-inner {
+              width: 80px;
+              height: 80px;
+            }
+            
+            .logo-text {
+              font-size: 10px;
+              letter-spacing: 1.5px;
+            }
+            
+            .progress-bar {
+              width: 220px;
+              height: 5px;
+            }
+            
+            .progress-text {
+              font-size: 16px;
+            }
+            
+            .loading-status {
+              font-size: 12px;
             }
           }
         `}</style>
