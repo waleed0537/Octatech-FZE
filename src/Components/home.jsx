@@ -235,31 +235,31 @@ const LandingPage = () => {
                             </Link>
                             </li>
                             <li style={{ margin: '0 15px' }}>
-                            <Link
-                              to="/#contact-section-id"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                const element = document.getElementById('contact-section-id');
-                                if (element) {
-                                  element.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                  });
-                                }
-                              }}
-                              className="text-white1"
-                              style={{
-                                color: '#ffffff',
-                                textDecoration: 'none',
-                                fontSize: '16px',
-                                fontWeight: '500',
-                                padding: '8px 5px',
-                                position: 'relative',
-                                transition: 'all 0.3s ease'
-                              }}
-                            >
-                              Contact
-                            </Link>
+                              <Link
+                                to="/#contact-section-id"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  const element = document.getElementById('contact-section-id');
+                                  if (element) {
+                                    element.scrollIntoView({
+                                      behavior: 'smooth',
+                                      block: 'start'
+                                    });
+                                  }
+                                }}
+                                className="text-white1"
+                                style={{
+                                  color: '#ffffff',
+                                  textDecoration: 'none',
+                                  fontSize: '16px',
+                                  fontWeight: '500',
+                                  padding: '8px 5px',
+                                  position: 'relative',
+                                  transition: 'all 0.3s ease'
+                                }}
+                              >
+                                Contact
+                              </Link>
                             </li>
                             <li style={{ margin: '0 15px' }}>
                               <Link
@@ -333,45 +333,45 @@ const LandingPage = () => {
 
                     {/* Desktop Buttons */}
                     <div className="menu-right d-none d-lg-flex align-items-center">
-  <button
-    onClick={() => {
-      const element = document.getElementById('contact-section-id');
-      if (element) {
-        element.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }}
-    className="theme-btn"
-    style={{
-      padding: '10px 20px',
-      marginRight: '15px',
-      borderRadius: '6px',
-      background: 'rgba(78, 97, 255, 0.9)',
-      color: '#ffffff',
-      border: 'none',
-      cursor: 'pointer',
-      fontWeight: '600',
-      fontSize: '15px',
-      transition: 'all 0.3s ease',
-      display: 'flex',
-      alignItems: 'center'
-    }}
-    onMouseOver={(e) => {
-      e.target.style.background = 'rgba(78, 97, 255, 1)';
-      e.target.style.transform = 'translateY(-2px)';
-      e.target.style.boxShadow = '0 4px 8px rgba(78, 97, 255, 0.3)';
-    }}
-    onMouseOut={(e) => {
-      e.target.style.background = 'rgba(78, 97, 255, 0.9)';
-      e.target.style.transform = 'translateY(0)';
-      e.target.style.boxShadow = 'none';
-    }}
-  >
-    Get Started
-  </button>
-</div>
+                      <button
+                        onClick={() => {
+                          const element = document.getElementById('contact-section-id');
+                          if (element) {
+                            element.scrollIntoView({
+                              behavior: 'smooth',
+                              block: 'start'
+                            });
+                          }
+                        }}
+                        className="theme-btn"
+                        style={{
+                          padding: '10px 20px',
+                          marginRight: '15px',
+                          borderRadius: '6px',
+                          background: 'rgba(78, 97, 255, 0.9)',
+                          color: '#ffffff',
+                          border: 'none',
+                          cursor: 'pointer',
+                          fontWeight: '600',
+                          fontSize: '15px',
+                          transition: 'all 0.3s ease',
+                          display: 'flex',
+                          alignItems: 'center'
+                        }}
+                        onMouseOver={(e) => {
+                          e.target.style.background = 'rgba(78, 97, 255, 1)';
+                          e.target.style.transform = 'translateY(-2px)';
+                          e.target.style.boxShadow = '0 4px 8px rgba(78, 97, 255, 0.3)';
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.background = 'rgba(78, 97, 255, 0.9)';
+                          e.target.style.transform = 'translateY(0)';
+                          e.target.style.boxShadow = 'none';
+                        }}
+                      >
+                        Get Started
+                      </button>
+                    </div>
                   </div>
 
                   {/* Mobile Menu - Updated positioning */}
@@ -548,21 +548,22 @@ const LandingPage = () => {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            style={{color:'white'}}
                           />
-                          <button 
-  type="button"
-  onClick={() => {
-    const element = document.getElementById('contact-section-id');
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  }}
->
-  Contact sales <i className="fas fa-arrow-right"></i>
-</button>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const element = document.getElementById('contact-section-id');
+                              if (element) {
+                                element.scrollIntoView({
+                                  behavior: 'smooth',
+                                  block: 'start'
+                                });
+                              }
+                            }}
+                          >
+                            Contact sales <i className="fas fa-arrow-right"></i>
+                          </button>
                         </div>
                         <div className="newsletter-radios wow fadeInUp delay-0-8s">
                           <div className="custom-control custom-radio">
