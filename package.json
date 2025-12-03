@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "server": "node --experimental-modules src/Backend/server.js",
-    "dev": "vite --host 0.0.0.0 --port 5173",
+    "dev": "vite --host 0.0.0.0 --port 5174",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 5173",
+    "preview": "vite preview --host 0.0.0.0 --port 5174",
     "lint": "eslint ."
   },
   "dependencies": {
