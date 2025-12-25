@@ -1220,10 +1220,7 @@ const LandingPage = () => {
                       <div className="footer-widget">
                         <h4 className="footer-title">Contact Info</h4>
                         <ul className="list-style-three">
-                          <li>
-                            <i className="fas fa-map-marker-alt"></i>
-                            <span>UAE, USA</span>
-                          </li>
+                        
                           <li>
                             <i className="fas fa-envelope"></i>
                             <a href="support@octatechfze.com">hello@octatechfze.com</a>
